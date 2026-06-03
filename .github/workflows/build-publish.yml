@@ -1,6 +1,8 @@
 name: Build and publish Docker image
 
 on:
+  schedule:
+    - cron: '0 2 * * 1' # every Monday 02:00 UTC
   workflow_dispatch:
     inputs:
       GOST_VERSION:
